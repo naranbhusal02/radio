@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Nepal Live</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Radio Nepal Live</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="player-container">
+                <div class="album-art-container">
+                    <div class="album-art rotating">
+                        <img src="Image.png" alt="Radio Nepal Logo" id="albumArt">
+                    </div>
+                    <div class="audio-waves">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="player-info">
+                    <h2 id="nowPlaying">Now Playing: 96.1 FM</h2>
+                    <p id="currentTime">8:42:08 pm</p>
+                </div>
+
+                <div class="controls">
+                    <button id="playPauseBtn" class="control-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-up" id="volumeIcon"></i>
+                        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                    </div>
+                </div>
+
+                <div id="loadingIndicator" class="loading-indicator hidden">
+                    <i class="fas fa-spinner fa-spin"></i> Loading...
+                </div>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Radio Nepal Live. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <audio id="radioPlayer" preload="none">
+        <source src="https://radio-broadcast.ekantipur.com/stream" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
