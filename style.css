@@ -37,6 +37,7 @@ header {
     color: var(--secondary-color);
     font-size: 2rem;
     font-weight: bold;
+    text-decoration: none;
 }
 
 nav ul {
